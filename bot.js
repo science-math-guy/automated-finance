@@ -37,10 +37,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/cisco', (req, res) => {
-    run().then(() => {
-        res.json(dernierCoupon);
-        console.log('done');
-    });
+    run();
+    res.json(dernierCoupon);
 })
 
 app.listen(process.env.PORT, () => {
